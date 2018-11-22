@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--begin:Head-->
+	<title>Exercices UI-DEV</title>
+	<!--begin:Meta-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/> 
+	<!--end:Meta-->
+	<!--begin:Link-->
+
+	 <!--lien de fonts doit être au desus du lien css pour que le css puisse utilser les fontes-->
+	<link rel="stylesheet" href="style.css"/>
+	<!--end:Link-->
+<!--begin:Head-->
+</head>
+<!-- your fundamental error : id MUST BE UNIQUE, changed a to a1 and a2 where necessary, ditto b and c -->
+
+<!-- also changed some texts in the interest of correct spelling -->
+
+<body >
+<!--begin: Body-->
+	<!--begin:Header-->
+	<header class="header sticky ">
+		<div class="container">
+			<h1 class="title">Exercices en JS-1</h1>
+			<button class="burger">Open menu</button>
+					<nav class="menu">
+
+
+						<ul class="list list--cours-1">
+							<li><a href="#ex-1" class="link link__menu">Exercice 1 - firstDeg</a></li>
+							<li><a href="#ex-2" class="link link__menu">Exercice 2 - Get square surface and perimeter</a></li>
+							<li><a href="#ex-3" class="link link__menu">Exercice 3 - betterValue</a></li>
+							
+							
+						</ul>
+					</nav>
+		</div>		
+
+	</header>
+	<!--end:Header-->
+		<div class="layout container">
+			<!--begin:Exercice 1-->
+			<section class="form">
+				<h2 id="ex-1">Exercice 1 - firstDeg</h2>
+				<!-- added a discription of the program-->
+				<p>Nous avons une équation telle que ax+b = 0.</p>
+				<p> Ce petit programe va vous permettre de trouver la valeur de x, tel que l'équation ci-dessus devienne toujours 0. Cela injecton n'importe quelle nombre sauf 0 pour la valeur A.</p>
+				<form>
+					<!--added &nbsp;-->
+					<label class="label">Donnez une valeur à A&nbsp;:&nbsp;</label>
+					<input class="input" id="a1" name="a"></br>
+					<label class="label">Donnez une valeur à B&nbsp;:&nbsp;</label>
+					<input class="input" id="b1" name="b">
+					<!-- CD changed here -->
+				</form>
+				<!--btn content changed to "Afficher la valeur de X-->
+				<button class="btn" id="result">Afficher la valeur de X</button></br>
+				<span class="result" id="show-result"></span>
+				<!--remove a floating </form> closing tag-->
+				<!--end:form-->
+			</section>
+			<!--end:Exercice 1-->
+
+			<!--begin:Exercice 2-->
+			<section class="form">
+				<h2 id="ex-1">Exercice 2 - secondDeg</h2>
+				<!-- added a discription of the program-->
+				<p>Nous avons une équation telle que ax²+bx+c = 0.</p>
+				<p> Ce petit programme va vous permettre de trouver la plus grande valeur de x, telle que l'équation ci-dessus devienne toujours 0.</p>
+				<form>
+					<!--added &nbsp;-->
+					<label class="label">Donnez une valeur à A&nbsp;:&nbsp;</label>
+					<input class="input" id="a2" name="a"></br>
+					<label class="label">Donnez une valeur à B&nbsp;:&nbsp;</label>
+					<input class="input" id="b2" name="b">
+					<label class="label">Donnez une valeur à C&nbsp;:&nbsp;</label>
+					<input class="input" id="c2" name="c">
+					<!-- CD changed here -->
+				</form>
+				<!--btn content changed to "Afficher la valeur de X-->
+				<button class="btn" id="resultSecondDeg">Afficher la valeur de X</button></br>
+				<span class="result" id="show-resultSecondDeg"></span>
+				<!--remove a floating </form> closing tag-->
+				<!--end:form-->
+			</section>
+			<!--end:Exercice 2-->
+			
+
+			
+	</div>
+	<!--begin:script-->
+		<script src="app.js"></script>
+	<!--end:script-->	
+<!--end: Body-->
+</body>
+</html>
