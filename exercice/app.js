@@ -1,9 +1,8 @@
 /*
 *Daniel De Pinho Lucas 
-*JS-1  - Corus exercices
+*UI dev - Corus exercices
 *
 */
-
 //cours forntend -HEAJ - Monsieur Thronte
 /***Menu*/
 const burger = document.querySelector(".burger");
@@ -27,14 +26,14 @@ burger.addEventListener("click", function(){
 		result.addEventListener("click", function(e){
 
 			/*begin:Get values of user input*/
-			var a = parseFloat(document.getElementById("a1").value);
-			var b = parseFloat(document.getElementById("b1").value);
+			var a = parseFloat(document.getElementById("a").value);
+			var b = parseFloat(document.getElementById("b").value);
 			/*end:Get values of user input*/
 				
 					/*notify user of invalid number*/
 					if (a==0) {
-						document.write("Condiition d'existabce : a ≠ 0");
-						/* CD : WHY NOT use the showResult field */
+		document.write("Valeur invalide!");
+		/* CD : WHY NOT use the showResult field */
 					}
 					/*display result*/
 					else{
@@ -47,14 +46,13 @@ burger.addEventListener("click", function(){
 //exercice 2
 /*begin:secondDeg function*/
 /*declare var*/
+var delta = Math.pow(b,2)-4*a*c;
 		
-function secondDeg(a,b,c) {
-    /* you do not handle correctly the case where a is zero, THINK */
-		    var delta = Math.pow(b,2)-4*a*c;// need to re-calculate; the alternative is to pass delta in the parameters (because delta was calculated outside of this functio
+		function secondDeg(a,b,c) {
 			
-		    var x1 = (-b-Math.sqrt(delta))/2*a;
-		    var x2 = (-b+Math.sqrt(delta))/2*a;
-			return x2; // the larger of the two rrots	
+			var x1 = -b-Math.sqrt(delta)/2*a;
+			var x2 = -b+Math.sqrt(delta)/2*a;
+			return x1, x2;	
 		}
 /*end:secondDeg function*/
 		/*this var delta (also called Discriminant in maths) will help us setting up this programm and condition if you do not understand this formula 
@@ -69,18 +67,16 @@ function secondDeg(a,b,c) {
 		/*btn listen to click event*/
 		resultSecondDeg.addEventListener("click", function(e){
 			/*begin:Get values of user input*/
-			var a = Number(document.getElementById("a2").value);
+			var a = Number(document.getElementById("a").value);
 			console.log(a);
-			var b = Number(document.getElementById("b2").value);
+			var b = Number(document.getElementById("b").value);
 			console.log(b);
-			var c = Number(document.getElementById("c2").value);
+			var c = Number(document.getElementById("c").value);
 			console.log(c);
-		    var delta = Math.pow(b,2)-4*a*c;
-
 			/*end:Get values of user input*/
 					/*notify user of invalid number*/
 					if (delta < 0) {
-						showResultSecondDeg.innerHTML = "Pas de solution trouver! Essayer autres valeurs.";
+						showResultSecondDeg.innerHTML = "Pas de solution trouver! Essailer autres valeurs.";
 					}else if(delta ==0){
 						/*gave a shotter more spcific html content to result*/
 						showResultSecondDeg.innerHTML = "X = "+secondDeg(a,b,c);
@@ -88,7 +84,7 @@ function secondDeg(a,b,c) {
 						showResultSecondDeg.innerHTML = "X = "+secondDeg(a,b,c);
 					}
 					else{
-						showResultSecondDeg.innerHTML = "Veuillez n'entrer que des nombres";
+						showResultSecondDeg.innerHTML = "Veuillez entre que des nombres";
 					} 
 			});
 		/*end:EventListener*/	
